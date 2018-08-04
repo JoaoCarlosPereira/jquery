@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exercicio I</title>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dolar-real').click(function () {
+                    var d = $('#dolar').val();
+                    d = d * 3.71;
+                    $('#real').val(d);
+                });
+                
+                $('#real-dolar').click(function () {
+                    var d = $('#real').val();
+                    d = d / 3.71;
+                    $('#dolar').val(d);
+                });  
+                $('body').append('<p id="paragrafo"> Olá mundo!</p>');
+            });
+        </script>
+
+    </head>
+    <body>
+        <input type="text" id="dolar"/>
+        <button id="dolar-real">Converter para reais</button>
+        <button id="real-dolar">Converter para dolar</button>
+        <input type="text" id="real"/>
+    </body>
+</html>
