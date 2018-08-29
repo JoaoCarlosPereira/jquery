@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Formulário validações</title>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+        <script>
+
+            $.fn.greenify = function () {
+                this.css('color', 'green');
+                return this;
+            };
+
+            $.fn.legendar = function () {
+                this.filter("img").each(function () {
+                    var imagem = $(this);
+                    imagem.after("<br>Legenda: " + imagem.attr("alt"));
+                });
+
+                return this;
+            };
+
+
+            $.fn.substituir = function () {
+                this.filter("p").each(function () {
+                    var texto = $(this);
+                    var Conteudo = texto.text();
+                    Conteudo = Conteudo.replace(/e/g, "enter");
+                    Conteudo = Conteudo.replace(/i/g, "inis");
+                    Conteudo = Conteudo.replace(/o/g, "omber");
+                    Conteudo = Conteudo.replace(/u/g, "ufter");
+                    Conteudo = Conteudo.replace(/a/g, "ais");
+                    texto.text(Conteudo);
+                });
+
+                return this;
+            };
+
+
+
+
+            $(document).ready(function () {
+                $('a').greenify();
+                $('img').legendar();
+                $('p').substituir();
+
+                $(function () {
+                    $("#datepicker").datepicker();
+                    $('#rg').inputmask('9.999.999-9');
+                    $('#cpf').inputmask('999.999.999-99');
+                    $('#telefone').inputmask('(99) 9 9999-9999');
+                });
+            });
+        </script>        
+
+    </head>
+    <body>
+        <form id="form1" method="post" action="">
+
+            <img src="http://marketingdeconteudo.com/wp-content/uploads/2017/01/formatos-de-imagem-2.jpg" alt="Minha legenda"/>
+            <br>
+            <br>
+            <br>
+            <p>Podemos já vislumbrar o modo pelo qual a necessidade de renovação processual deve passar por modificações independentemente de alternativas às soluções ortodoxas.</p>
+            <br>
+            <br>
+            <a>Teste</a>
+            <label for="nome">Nascimento:</label><br>
+            <input type="text" id="datepicker"><br>
+            <label for="rg">RG:</label><br>
+            <input id="rg" name="rg" type="text"><br>
+            <label for="cpf">CPF:</label><br>
+            <input id="cpf"/><br>
+            <label for="telefone">Telefone:</label><br>
+            <input id="telefone" name="email" type="text"><br>
+            <input id="bt-enviar" value="Enviar" type="submit">
+        </form>
+    </body>
+</html>
