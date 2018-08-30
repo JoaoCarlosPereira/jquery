@@ -1,0 +1,81 @@
+#cabecalho {
+    background: #bada55;
+    color: cadetblue;
+    font-family: Droid Sans;
+    font-size: 18px;
+    line-height: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    width:100%;
+    box-sizing:border-box;
+}
+
+#conteudo {
+    background: #ffff99;
+    color: cadetblue;
+    font-family: Droid Sans;
+    font-size: 18px;
+    line-height: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    width:100%;
+    box-sizing:border-box;                
+}
+#galeria {
+    background: #ff8000;
+    color: cadetblue;
+    font-family: Droid Sans;
+    font-size: 18px;
+    line-height: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    width:100%;
+    box-sizing:border-box;                
+}
+
+#botao_topo, #subir {
+    width: 60px;
+    height: 30px;
+    background: #ffff99;
+    float: right;
+}
+
+input, select {
+    width: 300px;
+    height: 20px;
+}
+
+.slider {
+    width: 100%;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: .5;
+}
+
+.slick-current {
+    opacity: 1;
+}
